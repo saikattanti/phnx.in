@@ -1,21 +1,20 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Code, Gamepad2, Camera, Brain, Trophy, Users, PartyPopper, Palette } from 'lucide-react';
 import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Events() {
+export default function GamingEvents() {
     const events = [
         {
             id: "valorant",
             title: "Valorant",
-            image: "/events/valorant.webp" 
+            image: "/events/valorant.webp"
         },
         {
             id: "e-football",
             title: "E-Football",
-            image: "/events/e-football.jpg" 
+            image: "/events/e-football.jpg"
         },
         {
             id: "free-fire-max",
@@ -27,7 +26,6 @@ export default function Events() {
             title: "BGMI",
             image: "/events/bgmi.jpeg"
         }
-
     ];
 
     return (
@@ -35,6 +33,7 @@ export default function Events() {
             <Head>
                 <title>Gaming Events | Phoenix '25</title>
             </Head>
+
             {/* Hero Section */}
             <section className="relative py-20 overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?q=80&w=2000')] bg-cover bg-center opacity-20" />
@@ -56,16 +55,18 @@ export default function Events() {
                 </div>
             </section>
 
-            {/* Events Grid */}
+            {/* Events Grid - Modified to center last row */}
             <section className="py-20 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="flex flex-wrap justify-center">
                         {events.map((event, index) => (
                             <motion.div
                                 key={event.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
+                                whileHover={{ scale: 1.05 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8"
                             >
                                 <div className="group relative h-64 rounded-lg overflow-hidden">
                                     {/* Event Image Background */}
