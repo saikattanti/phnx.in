@@ -48,7 +48,7 @@ export default function Home() {
 
           {/* Countdown Timer */}
           <div className="mt-16">
-            <CountdownTimer targetDate="2024-04-01" />
+            <CountdownTimer targetDate="2025-04-04" />
           </div>
         </div>
 

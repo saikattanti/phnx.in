@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix - Annual Fest of Xplorica</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .squid-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            opacity: 0.8;
+            animation: rotate 20s infinite linear;
+        }
+        
+        .shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        
+        .shape {
+            position: absolute;
+            background: transparent;
+            border: 4px solid #FF0080;
+        }
+        
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            top: 15%;
+            left: 10%;
+            animation: floatAnimation 8s ease-in-out infinite, glowPulse 4s infinite alternate;
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-bottom-color: #FF0080;
+            background: transparent;
+            top: 60%;
+            right: 15%;
+            animation: floatAnimation 10s ease-in-out infinite 1s, glowPulse 3s infinite alternate;
+        }
+        
+        .square {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            right: 20%;
+            animation: floatAnimation 7s ease-in-out infinite 0.5s, glowPulse 5s infinite alternate;
+        }
+        
+        .content {
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: clamp(50px, 15vw, 120px);
+            font-weight: bold;
+            color: #FF0080;
+            text-shadow: 0 0 10px rgba(255, 0, 128, 0.7);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s forwards, titleGlow 3s infinite alternate;
+        }
+        
+        .coming-soon {
+            font-size: clamp(16px, 5vw, 24px);
+            color: #fff;
+            letter-spacing: clamp(2px, 2vw, 5px);
+            margin-bottom: 40px;
+            /* opacity: 0; */
+            /* animation: fadeIn 2s 0.5s forwards, letterSpacing 5s ease-in-out infinite; */
+        }
+        
+        .countdown {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s 1s forwards;
+            width: 100%;
+        }
+        
+        .countdown-item {
+            text-align: center;
+            min-width: 70px;
+            transform-style: preserve-3d;
+            perspective: 500px;
+            margin: 0 5px;
+        }
+        
+        .countdown-number {
+            font-size: clamp(24px, 8vw, 40px);
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: clamp(10px, 3vw, 20px);
+            border-radius: 8px;
+            color: #FF0080;
+            box-shadow: 0 0 15px rgba(255, 0, 128, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            animation: numberPulse 1s infinite alternate;
+        }
+        
+        .countdown-number::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(255, 0, 128, 0.1) 50%, transparent 100%);
+            animation: shine 3s infinite;
+        }
+        
+        .countdown-label {
+            font-size: clamp(10px, 3vw, 14px);
+            margin-top: 10px;
+            color: #ccc;
+            letter-spacing: 2px;
+            animation: labelPulse 2s infinite alternate;
+        }
+        
+        .guards {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25vh;
+            max-height: 180px;
+            display: flex;
+            justify-content: space-evenly;
+            z-index: 5;
+            opacity: 0.8;
+        }
+        
+        .guard {
+            width: clamp(40px, 15vw, 120px);
+            height: 100%;
+            background-color: #FF0080;
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            opacity: 0;
+            animation: guardAppear 2s forwards, guardSway 5s ease-in-out infinite;
+        }
+        
+        .guard:nth-child(1) {
+            animation-delay: 1.5s, 0s;
+        }
+        
+        .guard:nth-child(2) {
+            animation-delay: 2s, 0.5s;
+        }
+        
+        .guard:nth-child(3) {
+            animation-delay: 2.5s, 1s;
+        }
+        
+        .guard::before {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 25%;
+            background-color: black;
+            border-radius: 10px;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .background-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: #FF0080;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: particleFall linear infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes guardAppear {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 0.8; transform: translateY(0); }
+        }
+        
+        @keyframes guardSway {
+            0% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(5px) rotate(1deg); }
+            75% { transform: translateX(-5px) rotate(-1deg); }
+            100% { transform: translateX(0) rotate(0deg); }
+        }
+        
+        @keyframes floatAnimation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @keyframes numberPulse {
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 0, 128, 0.3); }
+            100% { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 0, 128, 0.5); }
+        }
+        
+        @keyframes labelPulse {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes glowPulse {
+            0% { border-color: #FF0080; box-shadow: 0 0 5px rgba(255, 0, 128, 0.5); }
+            100% { border-color: #ff3399; box-shadow: 0 0 20px rgba(255, 0, 128, 0.8); }
+        }
+        
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 10px rgba(255, 0, 128, 0.7); }
+            100% { text-shadow: 0 0 20px rgba(255, 0, 128, 1), 0 0 30px rgba(255, 0, 128, 0.5); }
+        }
+        
+        @keyframes letterSpacing {
+            0% { letter-spacing: 5px; }
+            50% { letter-spacing: clamp(5px, 3vw, 15px); }
+            100% { letter-spacing: 5px; }
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            20% { transform: translateX(100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        
+        @keyframes particleFall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+            10% { opacity: 0.3; }
+            100% { transform: translateY(110vh) translateX(20px); opacity: 0; }
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.03) 2px,
+                rgba(0, 0, 0, 0.03) 4px
+            );
+            pointer-events: none;
+            z-index: 20;
+            animation: scanline 10s linear infinite;
+        }
+        
+        @keyframes scanline {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100px; }
+        }
+        
+        /* Media Queries for better responsiveness */
+        @media (max-width: 768px) {
+            .shapes .circle {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .shapes .triangle {
+                border-width: 50px;
+            }
+            
+            .shapes .square {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .squid-logo {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+                left: 10px;
+            }
+            
+            .content {
+                margin-top: 0;
+            }
+            
+            .countdown {
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .countdown-item {
+                min-width: 60px;
+            }
+            
+            .squid-logo {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .guards {
+                max-height: 120px;
+            }
+        }
+        
+        /* For very small screens */
+        @media (max-width: 350px) {
+            .title {
+                margin-bottom: 10px;
+            }
+            
+            .coming-soon {
+                margin-bottom: 20px;
+            }
+            
+            .countdown-item {
+                min-width: 55px;
+            }
+        }
+        
+        /* For landscape mode on mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding-top: 60px;
+                padding-bottom: 100px;
+            }
+            
+            .title {
+                margin-top: 15px;
+                font-size: clamp(40px, 10vw, 100px);
+            }
+            
+            .guards {
+                height: 120px;
+            }
+            
+            .countdown {
+                margin-top: 5px;
+            }
+            
+            .countdown-number {
+                padding: clamp(5px, 2vw, 15px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <div class="background-particles" id="particles"></div>
+    
+    <div class="shapes">
+        <div class="shape circle"></div>
+        <div class="shape triangle"></div>
+        <div class="shape square"></div>
+    </div>
+    
+    <svg class="squid-logo" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#FF0080" stroke-width="5" />
+        <polygon points="50,15 85,65 15,65" fill="none" stroke="#FF0080" stroke-width="5" />
+        <rect x="35" y="35" width="30" height="30" fill="none" stroke="#FF0080" stroke-width="5" />
+    </svg>
+    
+    <div class="content">
+        <h1 class="title">PHOENIX 2025</h1>
+        <p class="coming-soon">4th , 5th & 6th APRIL</p>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">DAYS</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">HOURS</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">MINUTES</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">SECONDS</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="guards">
+        <div class="guard"></div>
+        <div class="guard"></div>
+        <div class="guard"></div>
+    </div>
+    
+    <script>
+        // Set the date we're counting down to
+        const countDownDate = new Date("April 4, 2025 00:00:00").getTime();
+        
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get today's date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the countdown date
+            const distance = countDownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the results
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            
+            // If the countdown is finished, display message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+        
+        // Create falling particles - reduce count for mobile
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const isMobile = window.innerWidth <= 768;
+            const particleCount = isMobile ? 25 : 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position
+                const posX = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                
+                // Random size
+                const size = Math.random() * 5 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random duration
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                const delay = Math.random() * 10;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+        
+        // Handle resize for responsive behavior
+        window.addEventListener('resize', function() {
+            // Clear and recreate particles on resize
+            const particlesContainer = document.getElementById('particles');
+            particlesContainer.innerHTML = '';
+            createParticles();
+        });
+    </script>
+</body>
+</html>

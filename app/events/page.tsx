@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Code, Gamepad2, Camera, Brain, Trophy, Users, PartyPopper } from 'lucide-react';
+import { Code, Gamepad2, Camera, Brain, Trophy, Users, PartyPopper, Palette } from 'lucide-react';
 
 export default function Events() {
   const events = [
@@ -15,10 +15,17 @@ export default function Events() {
     },
     {
       id: "technical",
-      title: "Technical Events",
+      title: "Technical",
       description: "Crack the challenge or face elimination. Test your technical prowess.",
       icon: Brain,
       color: "from-blue-500 to-purple-500",
+    },
+    {
+      id: "non-technical",
+      title: "Non Technical",
+      description: "sss",
+      icon: Palette,
+      color: "from-white-500 to-emerald-500",
     },
     {
       id: "gaming",
@@ -55,7 +62,7 @@ export default function Events() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?q=80&w=2000')] bg-cover bg-center opacity-20" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,12 +94,12 @@ export default function Events() {
                 <Link href={`/events/${event.id}`}>
                   <div className="group relative bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 p-6">
                     <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                    
+
                     <div className="relative z-10">
                       <event.icon className="h-12 w-12 text-[#FF2D55] mb-4" />
                       <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                       <p className="text-gray-400">{event.description}</p>
-                      
+
                       <div className="mt-4 flex items-center text-pink-500">
                         <span className="text-sm font-medium">Learn more</span>
                         <Trophy className="ml-2 h-4 w-4" />

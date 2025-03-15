@@ -9,12 +9,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { href: '/about', label: 'About Us', icon: Circle },
     { href: '/events', label: 'Events', icon: Triangle },
     { href: '/sponsors', label: 'Sponsors', icon: Square },
-    { href: '/team', label: 'Team', icon: Users },
+    // { href: '/team', label: 'Team', icon: Users },
     { href: '/gallery', label: 'Gallery', icon: Camera },
-    { href: '/contact', label: 'Contact', icon: Phone },
+    { href: '/about', label: 'About Us', icon: Circle },
   ];
 
   return (
@@ -22,8 +21,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <Trophy className="h-8 w-8 text-[#FF2D55]" />
-            <span className="ml-2 text-xl font-bold text-white">Phoenix 25</span>
+            <img src="/logo/phoenix-small.png" className="" />
+            <span className="ml-2 text-xl font-bold text-white">Phoenix '25</span>
           </Link>
 
           {/* Desktop Menu */}
