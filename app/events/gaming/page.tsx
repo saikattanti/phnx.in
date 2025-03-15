@@ -10,12 +10,12 @@ export default function Events() {
         {
             id: "valorant",
             title: "Valorant",
-            image: "/api/placeholder/800/500" // Replace with actual image path
+            image: "/events/valorant.webp" 
         },
         {
             id: "e-football",
             title: "E-Football",
-            image: "/events/e-football.jpg" // Replace with actual image path
+            image: "/events/e-football.jpg" 
         },
         {
             id: "free-fire-max",
@@ -25,7 +25,7 @@ export default function Events() {
         {
             id: "bgmi",
             title: "BGMI",
-            image: "/events/bgmi.png"
+            image: "/events/bgmi.jpeg"
         }
 
     ];

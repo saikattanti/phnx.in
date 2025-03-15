@@ -3,18 +3,21 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 
-const carnivalEvents = [
-  { id: "minutes-to-win", name: "Minutes to Win", image: "/events/e-football.jpg" },
-  { id: "zorbing", name: "Zorbing", image: "/events/e-football.jpg" },
-  { id: "wordsworth", name: "Wordsworth", image: "/events/e-football.jpg" },
-  { id: "shooting", name: "Shooting", image: "/events/e-football.jpg" },
+const nonTechEvents = [
+  { id: "Sherlockology", name: "Sherlockology", image: "/events/debate.jpg" },
+  { id: "treasure-hunt", name: "Treasure Hunt", image: "/events/treasure-hunt.jpg" },
+  { id: "The Podium", name: "The Podium", image: "/events/quiz.jpg" },
+  { id: "Art-Maniac", name: "Art-Maniac", image: "/events/talent-show.jpg" },
+  { id: "Penchanted", name: "Penchanted", image: "/events/poetry-slam.jpg" },
+  { id: "Craftism", name: "Craftism", image: "/events/standup-comedy.jpg" },
+  { id: "Quizzomaniac", name: "Quizzomaniac", image: "/events/music-battle.jpg" },
 ];
 
-export default function CarnivalPage() {
+export default function NonTechPage() {
   return (
     <div className="min-h-screen bg-[#121212] pt-20">
       <Head>
-        <title>Carnival Events | Phoenix '25</title>
+        <title>Non-Tech Events | Phoenix '25</title>
       </Head>
 
       {/* Title Section */}
@@ -27,10 +30,10 @@ export default function CarnivalPage() {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-              🎡 CARNIVAL EVENTS 🎠
+              🎭 NON-TECH EVENTS 🎶
             </h1>
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the fun, challenge your skills, and enjoy the thrill!
+              Showcase your creativity, talent, and wit in these exciting events!
             </p>
           </motion.div>
         </div>
@@ -40,7 +43,7 @@ export default function CarnivalPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-            {carnivalEvents.map((event, index) => (
+            {nonTechEvents.map((event, index) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -48,11 +51,11 @@ export default function CarnivalPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className={`relative rounded-lg overflow-hidden w-full max-w-sm h-72 group shadow-lg transition-all duration-300 ${
-                  carnivalEvents.length % 3 === 1 && index === carnivalEvents.length - 1
+                  nonTechEvents.length % 3 === 1 && index === nonTechEvents.length - 1
                     ? "col-span-3 justify-self-center"
                     : ""
                 } ${
-                  carnivalEvents.length % 3 === 2 && index === carnivalEvents.length - 2
+                  nonTechEvents.length % 3 === 2 && index === nonTechEvents.length - 2
                     ? "col-span-2 justify-self-center"
                     : ""
                 }`}
@@ -73,13 +76,13 @@ export default function CarnivalPage() {
                   {/* Buttons */}
                   <div className="grid grid-cols-2 gap-3 mt-4">
                     <Link
-                      href={`/events/carnival/${event.id}`}
+                      href={`/events/non-tech/${event.id}`}
                       className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
                     >
                       Know More
                     </Link>
                     <Link
-                      href={`/events/carnival/${event.id}/register`}
+                      href={`/events/non-tech/${event.id}/register`}
                       className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
                     >
                       Register Now

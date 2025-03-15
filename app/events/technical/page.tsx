@@ -3,18 +3,20 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 
-const carnivalEvents = [
-  { id: "minutes-to-win", name: "Minutes to Win", image: "/events/e-football.jpg" },
-  { id: "zorbing", name: "Zorbing", image: "/events/e-football.jpg" },
-  { id: "wordsworth", name: "Wordsworth", image: "/events/e-football.jpg" },
-  { id: "shooting", name: "Shooting", image: "/events/e-football.jpg" },
+const technicalEvents = [
+  { id: "Web-Escape", name: "Web-Escape", image: "/events/hackathon.jpg" },
+  { id: "F-Society", name: "F-Society", image: "/events/code-golf.jpg" },
+  { id: "Bots of Anarchy", name: "Bots of Anarchy", image: "/events/ai-challenge.jpg" },
+  { id: "The Following", name: "Bug Hunt", image: "/events/bug-hunt.jpg" },
+  { id: "Robo Rush", name: "Robo Rush", image: "/events/ai-challenge.jpg" },
+  { id: "Captain Tsubotsa", name: "Captain Tsubotsa", image: "/events/bug-hunt.jpg" },
 ];
 
-export default function CarnivalPage() {
+export default function TechnicalPage() {
   return (
     <div className="min-h-screen bg-[#121212] pt-20">
       <Head>
-        <title>Carnival Events | Phoenix '25</title>
+        <title>Technical Events | Phoenix '25</title>
       </Head>
 
       {/* Title Section */}
@@ -26,11 +28,11 @@ export default function CarnivalPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-              🎡 CARNIVAL EVENTS 🎠
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-[#007BFF]">
+              🖥️ TECHNICAL EVENTS ⚙️
             </h1>
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-              Experience the fun, challenge your skills, and enjoy the thrill!
+              Test your coding skills, challenge AI, and hunt down bugs!
             </p>
           </motion.div>
         </div>
@@ -40,7 +42,7 @@ export default function CarnivalPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-            {carnivalEvents.map((event, index) => (
+            {technicalEvents.map((event, index) => (
               <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -48,11 +50,11 @@ export default function CarnivalPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className={`relative rounded-lg overflow-hidden w-full max-w-sm h-72 group shadow-lg transition-all duration-300 ${
-                  carnivalEvents.length % 3 === 1 && index === carnivalEvents.length - 1
+                  technicalEvents.length % 3 === 1 && index === technicalEvents.length - 1
                     ? "col-span-3 justify-self-center"
                     : ""
                 } ${
-                  carnivalEvents.length % 3 === 2 && index === carnivalEvents.length - 2
+                  technicalEvents.length % 3 === 2 && index === technicalEvents.length - 2
                     ? "col-span-2 justify-self-center"
                     : ""
                 }`}
@@ -73,14 +75,14 @@ export default function CarnivalPage() {
                   {/* Buttons */}
                   <div className="grid grid-cols-2 gap-3 mt-4">
                     <Link
-                      href={`/events/carnival/${event.id}`}
-                      className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
+                      href={`/events/technical/${event.id}`}
+                      className="bg-transparent border border-blue-500 hover:bg-blue-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
                     >
                       Know More
                     </Link>
                     <Link
-                      href={`/events/carnival/${event.id}/register`}
-                      className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
+                      href={`/events/technical/${event.id}/register`}
+                      className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300"
                     >
                       Register Now
                     </Link>
