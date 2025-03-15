@@ -49,7 +49,7 @@ export default function Gallery() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-            📸 Gallery
+            GALLERY
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Relive the moments from our past events.

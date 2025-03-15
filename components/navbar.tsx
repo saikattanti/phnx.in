@@ -49,7 +49,7 @@ const Navbar = () => {
           {/* Contact Us Button */}
           <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
             <Link
-              href="/contact-us"
+              href="/contact"
               className="px-5 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-left"
             >
               <Phone className="w-5 h-5 mr-2" />

@@ -26,7 +26,7 @@ export default function SponsorshipPage() {
   return (
     <div className="min-h-screen bg-[#121212] pt-20">
       <Head>
-        <title>Sponsorship | Phoenix '25</title>
+        <title>Sponsors | Phoenix '25</title>
       </Head>
 
       {/* Title Section */}
@@ -38,17 +38,17 @@ export default function SponsorshipPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-              LAST YEAR SPONSORS 
+               SPONSORS
             </h1>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-              We are grateful to our past sponsors for their invaluable support!
-            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Last Year Sponsors */}
       <section className="py-20 text-center">
+        <h2 className="text-2xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
+          Last Year Sponsors
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {lastYearSponsors.map((sponsor) => (
             <motion.a
