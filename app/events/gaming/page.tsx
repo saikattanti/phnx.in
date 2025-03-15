@@ -25,7 +25,7 @@ export default function Events() {
         {
             id: "bgmi",
             title: "BGMI",
-            image: "/events/bgmi.jpeg"
+            image: "/events/bgmi.png"
         }
 
     ];
@@ -79,17 +79,17 @@ export default function Events() {
                                     </div>
 
                                     {/* Content */}
-                                    <div className="relative h-full flex flex-col justify-between p-6 z-10">
-                                        <div className="text-center">
-                                            <h3 className="text-3xl font-bold text-white mb-2">{event.title}</h3>
+                                    <div className="relative h-full flex flex-col justify-end p-6 z-10">
+                                        <div className="text-center mb-4">
+                                            <h3 className="text-3xl font-bold text-white">{event.title}</h3>
                                         </div>
 
                                         {/* Buttons */}
-                                        <div className="flex flex-col space-y-3 mt-4 w-full">
-                                            <Link href={`/events/${event.id}`} className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 w-full text-center">
+                                        <div className="grid grid-cols-2 gap-3 w-full">
+                                            <Link href={`/events/${event.id}`} className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
                                                 Know More
                                             </Link>
-                                            <Link href={`/events/${event.id}/register`} className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 w-full text-center">
+                                            <Link href={`/events/${event.id}/register`} className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
                                                 Register Now
                                             </Link>
                                         </div>
