@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Facebook, Instagram, Youtube, Home, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Home, MapPin, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,10 +8,15 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col items-center">
         {/* Social Media Icons */}
         <div className="flex space-x-8 mb-6">
-          <Link href="https://instagram.com" target="_blank">
+          <Link href="https://instagram.com/phnx.fiem" target="_blank">
             <Instagram className="w-8 h-8 hover:text-pink-500 transition-all duration-300" />
           </Link>
-          <Link href="https://facebook.com" target="_blank">
+
+          <Link href="https://in.linkedin.com/company/xplorica" target="_blank">
+            <Linkedin className="w-8 h-8 hover:text-blue-500 transition-all duration-300" />
+          </Link>
+
+          <Link href="https://facebook.com/phnx.fiem" target="_blank">
             <Facebook className="w-8 h-8 hover:text-blue-500 transition-all duration-300" />
           </Link>
           <Link href="/" target="_blank">
@@ -20,7 +25,7 @@ export default function Footer() {
           <Link href="/contact" target="_blank">
             <MapPin className="w-8 h-8 hover:text-green-500 transition-all duration-300" />
           </Link>
-          <Link href="https://youtube.com" target="_blank">
+          <Link href="https://www.youtube.com/@Phoenix-xo9ul" target="_blank">
             <Youtube className="w-8 h-8 hover:text-red-500 transition-all duration-300" />
           </Link>
         </div>

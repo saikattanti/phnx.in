@@ -7,37 +7,42 @@ import Link from 'next/link';
 export default function GamingEvents() {
     const events = [
         {
-            id: "Minutes to win",
-            title: "Minutes to win",
-            image: "carnival/Minutes to win.jpg"
+            id: "Sherlokology",
+            title: "Sherlokology",
+            image: "non_tech/Sherlokology.jpg"
         },
         {
-            id: "Zorbing",
-            title: "Zorbing",
-            image: "carnival/Zorbing.jpg"
+            id: "Treasure Hunt",
+            title: "Treasure Hunt",
+            image: "non_tech/hunt.jpg"
         },
         {
-            id: "Wordsworth",
-            title: "Wordsworth",
-            image: "carnival/Wordsworth....jpg"
+            id: "The Podium",
+            title: "The Podium",
+            image: "non_tech/The Podium.png"
         },
         {
-            id: "Shooting",
-            title: "Shooting",
-            image: "carnival/Shooting.jpg"
+            id: "Art-maniac",
+            title: "Art-maniac",
+            image: "non_tech/Art-maniac.jpg"
         },
         {
-            id: "Cosplay",
-            title: "Cosplay",
-            image: "carnival/cosplay.jpg"
+            id: "Penchanted",
+            title: "Penchanted",
+            image: "non_tech/Penchanted.jpg"
+        },
+        {
+            id: "Quizzomaniac",
+            title: "Quizzomaniac",
+            image: "non_tech/Quizzomaniac.jpg"
         }
-        
+
     ];
 
     return (
         <div className="min-h-screen bg-[#121212] pt-20">
             <Head>
-                <title>Carnival Events | Phoenix '25</title>
+                <title>Non-Technical Events | Phoenix '25</title>
             </Head>
 
             {/* Hero Section */}
@@ -52,7 +57,7 @@ export default function GamingEvents() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                            CARNIVAL
+                        NON-TECHNICAL
                         </h1>
                         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
                             Enter the arena. Only the strongest players survive.

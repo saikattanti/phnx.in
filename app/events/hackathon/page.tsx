@@ -7,25 +7,11 @@ import Link from 'next/link';
 export default function GamingEvents() {
     const events = [
         {
-            id: "valorant",
-            title: "Valorant",
-            image: "/events/valorant.webp"
-        },
-        {
-            id: "e-football",
-            title: "E-Football",
-            image: "/events/e-football.jpg"
-        },
-        {
-            id: "free-fire-max",
-            title: "Free-Fire Max",
-            image: "/events/free-fire.jpg"
-        },
-        {
-            id: "bgmi",
-            title: "BGMI",
-            image: "/events/bgmi.jpeg"
+            id: "Hacktonix",
+            title: "Hacktonix",
+            image: "/events/hacktonix.jpg"
         }
+        
     ];
 
     return (
@@ -46,7 +32,7 @@ export default function GamingEvents() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                            GAMING
+                            HACKATHON
                         </h1>
                         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
                             Enter the arena. Only the strongest players survive.

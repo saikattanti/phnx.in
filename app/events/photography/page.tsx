@@ -4,40 +4,24 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function GamingEvents() {
+export default function PHOTOGRAPHY() {
     const events = [
         {
-            id: "Minutes to win",
-            title: "Minutes to win",
-            image: "carnival/Minutes to win.jpg"
+            id: "Pentaprism",
+            title: "Pentaprism",
+            image: "photography/Pentaprism.jpg"
         },
         {
-            id: "Zorbing",
-            title: "Zorbing",
-            image: "carnival/Zorbing.jpg"
-        },
-        {
-            id: "Wordsworth",
-            title: "Wordsworth",
-            image: "carnival/Wordsworth....jpg"
-        },
-        {
-            id: "Shooting",
-            title: "Shooting",
-            image: "carnival/Shooting.jpg"
-        },
-        {
-            id: "Cosplay",
-            title: "Cosplay",
-            image: "carnival/cosplay.jpg"
+            id: "InstaFrame",
+            title: "InstaFrame",
+            image: "photography/reel.jpg"
         }
-        
     ];
 
     return (
         <div className="min-h-screen bg-[#121212] pt-20">
             <Head>
-                <title>Carnival Events | Phoenix '25</title>
+                <title>PHOTOGRAPHY | Phoenix '25</title>
             </Head>
 
             {/* Hero Section */}
@@ -52,7 +36,7 @@ export default function GamingEvents() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                            CARNIVAL
+                         PHOTOGRAPHY
                         </h1>
                         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
                             Enter the arena. Only the strongest players survive.

@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Shield, Trophy, Users } from "lucide-react";
 
@@ -121,6 +122,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </div>
   );
 }

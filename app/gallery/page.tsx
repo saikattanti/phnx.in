@@ -4,13 +4,9 @@ import Footer from "@/components/Footer";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
+import GALLERY_IMAGES from "./GALLERY_IMAGES.js";
 
-const galleryItems = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  title: `Gallery Image ${i + 1}`,
-  category: ["Event Photos", "Competitions", "Behind the Scenes"][i % 3],
-  image: `/events/e-football.jpg`,
-}));
+const galleryItems = Array.from(GALLERY_IMAGES);
 
 const categories = ["All", "Event Photos", "Competitions", "Behind the Scenes"];
 
@@ -62,11 +58,10 @@ export default function Gallery() {
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-full transition-all duration-300 ${
-              activeCategory === category
-                ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg"
-                : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-            }`}
+            className={`px-4 py-2 rounded-full transition-all duration-300 ${activeCategory === category
+              ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg"
+              : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
             onClick={() => setActiveCategory(category)}
           >
             {category}
@@ -80,13 +75,13 @@ export default function Gallery() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredItems.map((item, index) => (
               <motion.div
-                key={item.id}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
                 className="relative rounded-lg overflow-hidden shadow-lg cursor-pointer group h-64"
-                onClick={() => setSelectedImage(item.id)}
+                onClick={() => setSelectedImage(index)}
               >
                 {/* Image Background */}
                 <div
@@ -146,7 +141,7 @@ export default function Gallery() {
                 className="relative bg-gray-900 aspect-video rounded-lg flex items-center justify-center overflow-hidden"
               >
                 <img
-                  src={galleryItems.find((item) => item.id === selectedImage)?.image}
+                  src={galleryItems.find((item, i) => i === selectedImage)?.image}
                   alt="Gallery Image"
                   className="w-full h-full object-cover"
                 />
@@ -155,10 +150,10 @@ export default function Gallery() {
               {/* Image Caption - Now Always Visible */}
               <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-4 text-center">
                 <h3 className="text-xl font-medium text-white">
-                  {galleryItems.find((item) => item.id === selectedImage)?.title}
+                  {galleryItems.find((item, i) => i === selectedImage)?.title}
                 </h3>
                 <p className="text-gray-400">
-                  {galleryItems.find((item) => item.id === selectedImage)?.category}
+                  {galleryItems.find((item, i) => i === selectedImage)?.category}
                 </p>
               </div>
             </div>

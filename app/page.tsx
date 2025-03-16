@@ -7,9 +7,14 @@ import Footer from "@/components/Footer";
 import CountdownTimer from "@/components/countdown-timer";
 import { ChevronRight, PlayCircle } from "lucide-react";
 import LoadingScreen from "@/components/LoadingScreen"; // Import Loading Component
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter()
   const [isLoading, setIsLoading] = useState(true);
+  async function goToEvents() {
+    router.push('/events')
+  }
 
   return (
     <div className="min-h-screen bg-[#121212] text-white">
@@ -31,27 +36,30 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                  Let the Game Begin
+                <h1 className="font-custom text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-[#FF2D55]">
+                  PHOENIX 2025
                 </h1>
                 <p className="text-xl md:text-2xl mb-8 text-gray-300">
-                  Welcome to Phoenix 25 - Where survival meets innovation
+                  4th, 5th & 6th April 2025
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button
                     size="lg"
                     className="bg-[#FF2D55] hover:bg-[#FF2D55]/90 text-white"
+                    onClick={goToEvents}
                   >
-                    Events <ChevronRight className="ml-2 h-4 w-4" />
+                    View Events <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button
+
+                  {/* <Button
                     size="lg"
                     variant="outline"
                     className="border-pink-500 text-pink-500 hover:bg-pink-500/10"
                   >
                     Watch Trailer <PlayCircle className="ml-2 h-4 w-4" />
-                  </Button>
+                  </Button> */}
+
                 </div>
               </motion.div>
 

@@ -17,11 +17,24 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-pink-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+
         {/* Left - Phoenix Logo & Name */}
         <div className="flex items-center space-x-2">
-          <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="w-10 h-10" />
-          <span className="text-xl font-bold text-white">Phoenix '25</span>
+          <Link href="https://futureeducation.in/fiem/" target="_blank">
+            <img src="/logo/future-blue.png" alt="FIEM Logo" className="h-8 w-auto" />
+          </Link>
+
+          <Link href="https://xplorica.in" target="_blank">
+            <img src="/logo/xplorica-small.png" alt="Xplorica Logo" className="h-10 w-auto ml-1" />
+          </Link>
+
+          <Link href="/">
+            <img src="/logo/phoenix-small.png" alt="Phoenix 25 Logo" className="h-10 w-auto ml-1" />
+          </Link>
+          <Link href="/">
+            <span className="text-xl font-bold text-white">Phoenix '25</span>
+          </Link>
         </div>
 
         {/* Right - Menu & Contact Us Button */}
@@ -57,11 +70,6 @@ const Navbar = () => {
             </Link>
           </motion.div>
         </div>
-      </div>
-
-      {/* Squid Game Logo (Centered) */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
-        <img src="/logo/squid_game-logo.png" alt="Squid Game Logo" className="h-10" />
       </div>
 
       {/* Mobile Menu Button */}

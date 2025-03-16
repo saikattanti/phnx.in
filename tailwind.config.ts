@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ['SquidGameFont', 'sans-serif'],
+        custom1: ['SquidGameFont', 'sans-serif'],
+        custom2: ['NetflixFont', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

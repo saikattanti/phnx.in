@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,37 +8,52 @@ import Link from 'next/link';
 export default function GamingEvents() {
     const events = [
         {
-            id: "Minutes to win",
-            title: "Minutes to win",
-            image: "carnival/Minutes to win.jpg"
+            id: "Web-Escape",
+            title: "Web-Escape",
+            image: "technical_/web-escape.jpg"
         },
         {
-            id: "Zorbing",
-            title: "Zorbing",
-            image: "carnival/Zorbing.jpg"
+            id: "F-society",
+            title: "F-society",
+            image: "technical_/f-society.jpg"
         },
         {
-            id: "Wordsworth",
-            title: "Wordsworth",
-            image: "carnival/Wordsworth....jpg"
+            id: "Bots of Anarchy",
+            title: "Bots of Anarchy",
+            image: "technical_/bots_of_anarchy.jpg"
         },
         {
-            id: "Shooting",
-            title: "Shooting",
-            image: "carnival/Shooting.jpg"
+            id: "The following",
+            title: "The following",
+            image: "technical_/the_following.jpg"
         },
         {
-            id: "Cosplay",
-            title: "Cosplay",
-            image: "carnival/cosplay.jpg"
+            id: "Robo rush",
+            title: "Robo rush",
+            image: "technical_/robo_rush.jpg"
+        },
+        {
+            id: "Captain tsubotsa",
+            title: "Captain tsubotsa",
+            image: "technical_/captain.jpg"
+        },
+        {
+            id: "Robo Maze",
+            title: "Robo Maze",
+            image: "technical_/robo_maze.jpg"
+        },
+        {
+            id: "robo war",
+            title: "robo war",
+            image: "technical_/robo_war.jpg"
         }
-        
+
     ];
 
     return (
         <div className="min-h-screen bg-[#121212] pt-20">
             <Head>
-                <title>Carnival Events | Phoenix '25</title>
+                <title>Technical Events | Phoenix '25</title>
             </Head>
 
             {/* Hero Section */}
@@ -52,8 +68,7 @@ export default function GamingEvents() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                            CARNIVAL
-                        </h1>
+                        TECHNICAL</h1>
                         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
                             Enter the arena. Only the strongest players survive.
                         </p>
@@ -107,6 +122,8 @@ export default function GamingEvents() {
                     </div>
                 </div>
             </section>
+
+          <Footer />
         </div>
     );
 }

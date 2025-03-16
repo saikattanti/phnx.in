@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { Brain, Camera, Code, Gamepad2, Palette, PartyPopper, Trophy, Users } from 'lucide-react';
 import Link from 'next/link';
-import { Code, Gamepad2, Camera, Brain, Trophy, Users, PartyPopper, Palette } from 'lucide-react';
+import Head from 'next/head';
+import Footer from '@/components/Footer';
+
 
 export default function Events() {
   const events = [
@@ -23,7 +26,7 @@ export default function Events() {
     {
       id: "non-technical",
       title: "Non Technical",
-      description: "sss",
+      description: "Participate in fun events and games. Only the best will survive.",
       icon: Palette,
       color: "from-white-500 to-emerald-500",
     },
@@ -59,6 +62,9 @@ export default function Events() {
 
   return (
     <div className="min-h-screen bg-[#121212] pt-20">
+      <Head>
+        <title>Events | Phoenix '25</title>
+      </Head>
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?q=80&w=2000')] bg-cover bg-center opacity-20" />
@@ -112,6 +118,8 @@ export default function Events() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
