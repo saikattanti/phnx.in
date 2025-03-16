@@ -10,42 +10,42 @@ export default function GamingEvents() {
         {
             id: "Web-Escape",
             title: "Web-Escape",
-            image: "technical_/web-escape.jpg"
+            image: "/technical_/web-escape.jpg"
         },
         {
             id: "F-society",
             title: "F-society",
-            image: "technical_/f-society.jpg"
+            image: "/technical_/f-society.jpg"
         },
         {
             id: "Bots of Anarchy",
             title: "Bots of Anarchy",
-            image: "technical_/bots_of_anarchy.jpg"
+            image: "/technical_/bots_of_anarchy.jpg"
         },
         {
             id: "The following",
             title: "The following",
-            image: "technical_/the_following.jpg"
+            image: "/technical_/the_following.jpg"
         },
         {
             id: "Robo rush",
             title: "Robo rush",
-            image: "technical_/robo_rush.jpg"
+            image: "/technical_/robo_rush.jpg"
         },
         {
             id: "Captain tsubotsa",
             title: "Captain tsubotsa",
-            image: "technical_/captain.jpg"
+            image: "/technical_/captain.jpg"
         },
         {
             id: "Robo Maze",
             title: "Robo Maze",
-            image: "technical_/robo_maze.jpg"
+            image: "/technical_/robo_maze.jpg"
         },
         {
             id: "robo war",
             title: "Robo War",
-            image: "technical_/robo_war.jpg"
+            image: "/technical_/robo_war.jpg"
         }
 
     ];
