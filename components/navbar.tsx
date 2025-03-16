@@ -92,6 +92,7 @@ const Navbar = () => {
                     href={item.href}
                     className="flex flex-col items-center text-center py-4 text-gray-300 hover:text-[#FF2D55] transition-colors"
                     onClick={() => setIsOpen(false)}
+                    rel="next"
                   >
                     <item.icon className="h-8 w-8 mb-2 text-[#FF2D55]" />
                     <span className="text-2xl font-medium">{item.label}</span>
