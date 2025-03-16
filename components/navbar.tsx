@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-pink-500/20">
+    <nav className="font-custom fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-pink-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
         {/* Left - Phoenix Logo & Name */}
@@ -32,12 +32,12 @@ const Navbar = () => {
             <img src="/logo/phoenix-small.png" alt="Phoenix 25 Logo" className="h-10 w-auto ml-1" />
           </Link>
           <Link href="/">
-            <span className="text-xl font-bold text-white">Phoenix '25</span>
+            <span className="font-custom text-xl font-bold text-white">Phoenix '25</span>
           </Link>
         </div>
 
         {/* Right - Menu Items (Desktop) */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 font-custom">
           {menuItems.map((item) => (
             <motion.div key={item.href} whileHover={{ scale: 1.1, y: -3 }} transition={{ duration: 0.3 }}>
               <Link

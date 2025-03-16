@@ -103,7 +103,7 @@ export default function Events() {
 
                     <div className="relative z-10">
                       <event.icon className="h-12 w-12 text-[#FF2D55] mb-4" />
-                      <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
+                      <h3 className="text-xl font-semibold text-white mb-2 font-custom tracking-widest">{event.title}</h3>
                       <p className="text-gray-400">{event.description}</p>
 
                       <div className="mt-4 flex items-center text-pink-500">

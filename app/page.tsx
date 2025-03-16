@@ -25,8 +25,8 @@ export default function Home() {
           {/* Hero Section */}
           <section className="relative h-screen flex items-center justify-center overflow-hidden">
             {/* Background Effects */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635126400317-44e7645e6458?q=80&w=2000')] bg-cover bg-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80" />
+            <div className="absolute inset-0 bg-[url('https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1200x630_center,f_auto,q_auto:best/newscms/2021_38/1779887/squid-game-ms-today-main-210926-01.jpg')] bg-cover bg-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/85 to-black/80" />
             </div>
 
             {/* Content */}
@@ -37,10 +37,10 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="font-custom text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                  PHOENIX 2025
+                 Phoenix 2025
                 </h1>
-                <p className="text-xl md:text-2xl mb-8 text-gray-300">
-                  4th, 5th & 6th April 2025
+                <p className="font-custom text-xl md:text-2xl mb-8 text-gray-300">
+                  4th, 5th & 6th April
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -64,13 +64,13 @@ export default function Home() {
               </motion.div>
 
               {/* Countdown Timer */}
-              <div className="mt-16">
+              <div className="mt-16 font-custom">
                 <CountdownTimer targetDate="2025-04-04" />
               </div>
             </div>
 
             {/* Animated Scroll Indicator */}
-            <motion.div
+            {/* <motion.div
               animate={{
                 y: [0, 10, 0],
               }}
@@ -84,7 +84,7 @@ export default function Home() {
               <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
                 <div className="w-1 h-3 bg-white/60 rounded-full mt-2" />
               </div>
-            </motion.div>
+            </motion.div> */}
           </section>
           <Footer />
         </>
