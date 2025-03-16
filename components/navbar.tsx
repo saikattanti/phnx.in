@@ -47,6 +47,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className="relative flex items-center text-gray-300 hover:text-[#FF2D55] transition-all duration-300 group"
+                  rel="next"
                 >
                   <motion.div
                     className="absolute inset-0 rounded-full bg-[#FF2D55] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-lg"
@@ -59,7 +60,7 @@ const Navbar = () => {
               </motion.div>
             ))}
           </div>
-          
+
         </div>
       </div>
 

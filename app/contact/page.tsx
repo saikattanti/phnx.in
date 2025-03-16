@@ -77,7 +77,8 @@ export default function Contact() {
                       <Phone className="h-4 w-4 mr-2 text-pink-400" /> {member.phone}
                     </Link>
                     <Link href={`mailto:${member.email}`} className="flex justify-center items-center text-gray-300 hover:text-pink-400 transition-all break-words text-sm md:text-base">
-                      <Mail className="h-4 w-4 mr-2 text-pink-400" /> {member.email}
+                      {/* <Mail className="h-4 w-4 mr-2 text-pink-400" />  */}
+                      {member.email}
                     </Link>
                   </div>
                 </div>
