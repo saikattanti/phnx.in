@@ -8,6 +8,7 @@ import CountdownTimer from "@/components/countdown-timer";
 import { ChevronRight, PlayCircle } from "lucide-react";
 import LoadingScreen from "@/components/LoadingScreen"; // Import Loading Component
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 export default function Home() {
   const router = useRouter()
@@ -18,6 +19,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#121212] text-white">
+       <Head>
+        <title>Phoenix 25 | The annual Techno-Management Fest of FIEM organized by Xplorica</title>
+        <meta name="description" content="Join the ultimate college fest experience at Phoenix 25, inspired by Squid Game"/>
+        <meta name="keywords" content="Phoenix 25, college fest, Squid Game, technical events, hackathon, gaming"/>
+      </Head>
+
       {isLoading ? (
         <LoadingScreen onFinish={() => setIsLoading(false)} />
       ) : (

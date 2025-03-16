@@ -72,14 +72,14 @@ export default function GamingEvents() {
                                         </div>
 
                                         {/* Buttons */}
-                                        {/* <div className="grid grid-cols-2 gap-3 w-full">
-                                            <Link href={`/events/${event.id}`} className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
+                                        <div className="grid grid-cols-2 gap-3 w-full">
+                                            <Link href={'https://drive.google.com/drive/folders/1rRDZoryfTN3lFfl9tWIp4RKN0WM6TZnY'} className="bg-transparent border border-pink-500 hover:bg-pink-500/20 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
                                                 Know More
                                             </Link>
-                                            <Link href={`/events/${event.id}/register`} className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
+                                            <Link href={'https://unstop.com/hackathons/hacktonix-phoenix-2025-future-institute-of-engineering-and-management-1427035'} className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md text-sm font-medium transition-all duration-300 text-center">
                                                 Register Now
                                             </Link>
-                                        </div> */}
+                                        </div>
 
                                     </div>
                                 </div>
