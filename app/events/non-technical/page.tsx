@@ -9,37 +9,37 @@ export default function GamingEvents() {
         {
             id: "Sherlokology",
             title: "Sherlokology",
-            image: "/non_tech/Sherlokology.jpg"
+            image: "/events/non_tech/Sherlokology.jpg"
         },
         {
             id: "Treasure Hunt",
             title: "Treasure Hunt",
-            image: "/non_tech/hunt.jpg"
+            image: "/events/non_tech/hunt.jpg"
         },
         {
             id: "The Podium",
             title: "The Podium",
-            image: "/non_tech/The Podium.png"
+            image: "/events/non_tech/The Podium.png"
         },
         {
             id: "Art-maniac",
             title: "Art-maniac",
-            image: "/non_tech/Art-maniac.jpg"
+            image: "/events/non_tech/Art-maniac.jpg"
         },
         {
             id: "Penchanted",
             title: "Penchanted",
-            image: "/non_tech/Penchanted.jpg"
+            image: "/events/non_tech/Penchanted.jpg"
         },
         {
             id: "Quizzomaniac",
             title: "Quizzomaniac",
-            image: "/non_tech/Quizzomaniac.jpg"
+            image: "/events/non_tech/Quizzomaniac.jpg"
         },
         {
             id: "Cosplay",
             title: "Cosplay",
-            image: "/carnival/cosplay.jpg"
+            image: "/events/carnival/cosplay.jpg"
         }
     ];
 
