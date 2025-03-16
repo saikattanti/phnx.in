@@ -44,7 +44,7 @@ export default function GamingEvents() {
         },
         {
             id: "robo war",
-            title: "robo war",
+            title: "Robo War",
             image: "technical_/robo_war.jpg"
         }
 

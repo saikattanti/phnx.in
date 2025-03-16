@@ -26,11 +26,11 @@ export default function GamingEvents() {
             title: "Shooting",
             image: "carnival/Shooting.jpg"
         },
-        {
-            id: "Cosplay",
-            title: "Cosplay",
-            image: "carnival/cosplay.jpg"
-        }
+        // {
+        //     id: "Cosplay",
+        //     title: "Cosplay",
+        //     image: "carnival/cosplay.jpg"
+        // }
         
     ];
 

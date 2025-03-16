@@ -37,7 +37,7 @@ export default function About() {
               className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-semibold"
               whileHover={{ scale: 1.02 }}
             >
-              Welcome to <span className="font-extrabold text-white">Phoenix 25</span>, where <span className="font-extrabold text-white">survival meets innovation!</span> 
+              Welcome to <span className="font-extrabold text-white">Phoenix '25</span>, where <span className="font-extrabold text-white">survival meets innovation! </span> 
               This year, inspired by the high-stakes world of <span className="font-extrabold text-white">Squid Game</span>, Phoenix transforms into the <span className="font-extrabold text-white">ultimate battleground</span> of intellect, skill, and strategy.
               Hosted by <span className="font-extrabold text-white">XplOriCa</span>, the official activity club of FIEM, Phoenix is the annual <span className="font-extrabold text-white">Techno-Management Fest</span>, now in its <span className="font-extrabold text-white">20th edition</span>, taking place on <span className="font-extrabold text-white">April 4th, 5th, and 6th</span>.
             </motion.p>

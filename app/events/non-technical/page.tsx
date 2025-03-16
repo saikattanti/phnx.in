@@ -35,8 +35,12 @@ export default function GamingEvents() {
             id: "Quizzomaniac",
             title: "Quizzomaniac",
             image: "non_tech/Quizzomaniac.jpg"
+        },
+        {
+            id: "Cosplay",
+            title: "Cosplay",
+            image: "carnival/cosplay.jpg"
         }
-
     ];
 
     return (

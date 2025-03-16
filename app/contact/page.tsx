@@ -53,7 +53,7 @@ export default function Contact() {
       </section>
 
       {/* Team Members Grid */}
-      <section className="py-10">
+      <section className="py-10 pb-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center">
             {teamMembers.map((member, index) => (
@@ -89,7 +89,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form & Info Section */}
-      <section className="py-16">
+      <section className="py-16 pt-2">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           {/* Contact Form and Contact Details - Side by Side */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
