@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 type Sponsor = {
   name: string;
@@ -45,7 +46,7 @@ export default function SponsorshipPage() {
       </section>
 
       {/* Last Year Sponsors */}
-      <section className="py-20 text-center">
+      <section className="py-20 pt-5 text-center">
         <h2 className="text-2xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
           Last Year Sponsors
         </h2>
@@ -71,6 +72,7 @@ export default function SponsorshipPage() {
           ))}
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }
