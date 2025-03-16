@@ -12,14 +12,14 @@ const teamMembers = [
     designation: "Core Committee Member",
     phone: "+91 9748102685",
     email: "shamba.saha.fiem.cse22@teamfuture.in",
-    image: "/team/cc/shamba.jpeg",
+    image: "/team/cc/shamba.jpg",
   },
   {
     name: "Ujjwal Sau",
     designation: "Core Committee Member",
     phone: "+91 8918500355",
     email: "ujjwal.sau.fiem.it22@teamfuture.in",
-    image: "/team/cc/ujjwal.jpeg",
+    image: "/team/cc/ujjwal.jpg",
   },
   {
     name: "Preyoshi Mondal",
