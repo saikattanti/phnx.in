@@ -59,7 +59,7 @@ export default function Gallery() {
           <button
             key={category}
             className={`px-4 py-2 rounded-full transition-all duration-300 ${activeCategory === category
-              ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg"
+              ? "bg-gradient-to-r from-pink-500 to-[#FF2D55] text-white shadow-lg"
               : "bg-gray-800 text-gray-300 hover:bg-gray-700"
               }`}
             onClick={() => setActiveCategory(category)}
