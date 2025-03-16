@@ -26,10 +26,10 @@ export default function About() {
           >
             {/* Title with Animated Gradient */}
             <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]"
+              className="font-custom text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]"
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
             >
-              About Phoenix 25
+              ABOUT
             </motion.h1>
             
             {/* Description */}

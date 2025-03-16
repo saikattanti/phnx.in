@@ -31,7 +31,7 @@ export default function GamingEvents() {
                         transition={{ duration: 0.8 }}
                         className="text-center"
                     >
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
+                        <h1 className="font-custom text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
                             HACKATHON
                         </h1>
                         <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">

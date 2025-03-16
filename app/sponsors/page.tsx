@@ -11,15 +11,15 @@ type Sponsor = {
 
 const lastYearSponsors: Sponsor[] = [
   { name: "Unstop", logo: "/sponsors/unstop.jpg", website: "https://unstop.com/" },
-  { name: "Apptech", logo: "/sponsors/apptech.png", website: "https://www.adidas.com" },
+  { name: "Apptech", logo: "/sponsors/apptech.png", website: "#" },
   { name: "Edugraph", logo: "/sponsors/edugraph.jpg", website: "https://www.telegraphindia.com/edugraph" },
   { name: "Finlatics", logo: "/sponsors/finlatics.png", website: "https://www.finlatics.com/" },
-  { name: "Globsyn", logo: "/sponsors/globsyn.jpeg", website: "https://www.google.com" },
+  { name: "Globsyn", logo: "/sponsors/globsyn.jpeg", website: "#" },
   { name: "Kebab Stop", logo: "/sponsors/kebab_stop.jpeg", website: "https://www.facebook.com/kebabbstop" },
   { name: "pizzahut", logo: "/sponsors/pizzahut.jpeg", website: "https://www.pizzahut.co.in/" },
   { name: "Reel 2 Real", logo: "/sponsors/reel2real.png", website: "https://www.facebook.com/reel2real.ronit" },
-  { name: "Tea", logo: "/sponsors/Tea.jpeg", website: "https://www.pepsi.com" },
-  { name: "Time", logo: "/sponsors/Time.jpeg", website: "https://www.coca-cola.com" },
+  { name: "Tea", logo: "/sponsors/Tea.jpeg", website: "#" },
+  { name: "Time", logo: "/sponsors/Time.jpeg", website: "#" },
 ];
 
 export default function SponsorshipPage() {
@@ -37,7 +37,7 @@ export default function SponsorshipPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
+            <h1 className="font-custom text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-[#FF2D55]">
                SPONSORS
             </h1>
           </motion.div>
