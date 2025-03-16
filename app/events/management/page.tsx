@@ -17,7 +17,7 @@ export default function GamingEvents() {
     return (
         <div className="min-h-screen bg-[#121212] pt-20">
             <Head>
-                <title>Pitchers  | Phoenix '25</title>
+                <title>Management  | Phoenix '25</title>
             </Head>
 
             {/* Hero Section */}
