@@ -9,7 +9,7 @@ export default function GamingEvents() {
         {
             id: "Pitchers ",
             title: "Pitchers ",
-            image: "/events/management/Pitchers.jpg"
+            image: "/events/management/new/Pitchers.jpg"
         }
         
     ];

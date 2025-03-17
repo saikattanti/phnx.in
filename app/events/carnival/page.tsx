@@ -9,22 +9,22 @@ export default function GamingEvents() {
         {
             id: "Minutes to win",
             title: "Minutes to win",
-            image: "/events/carnival/Minutes to win.jpg"
+            image: "/events/carnival/new/Minutes to win.jpg"
         },
         {
             id: "Zorbing",
             title: "Zorbing",
-            image: "/events/carnival/Zorbing.jpg"
+            image: "/events/carnival/new/Zorbing.jpg"
         },
         {
             id: "Wordsworth",
             title: "Wordsworth",
-            image: "/events/carnival/Wordsworth....jpg"
+            image: "/events/carnival/new/Wordsworth.jpg"
         },
         {
             id: "Shooting",
             title: "Shooting",
-            image: "/events/carnival/Shooting.jpg"
+            image: "/events/carnival/new/Shooting.jpg"
         },
         // {
         //     id: "Cosplay",

@@ -9,12 +9,12 @@ export default function PHOTOGRAPHY() {
         {
             id: "Pentaprism",
             title: "Pentaprism",
-            image: "/events/photography/Pentaprism.jpg"
+            image: "/events/photography/new/Pentaprism.jpg"
         },
         {
             id: "InstaFrame",
             title: "InstaFrame",
-            image: "/events/photography/reel.jpg"
+            image: "/events/photography/new/InstaFrame.jpg"
         }
     ];
 

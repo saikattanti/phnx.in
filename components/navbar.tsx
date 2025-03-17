@@ -18,22 +18,26 @@ const Navbar = () => {
 
   return (
     <nav className="font-custom fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-pink-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
         {/* Left - Phoenix Logo & Name */}
-        <div className="flex items-center space-x-2">
-          <Link href="https://futureeducation.in/fiem/" target="_blank">
-            <img src="/logo/future-blue.png" alt="FIEM Logo" className="h-8 w-auto" />
+        <div className="flex items-center space-x-16">
+          <Link href="/">
+            <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-auto ml-1" />
           </Link>
           <Link href="https://xplorica.in" target="_blank">
             <img src="/logo/xplorica-small.png" alt="Xplorica Logo" className="h-10 w-auto ml-1" />
           </Link>
-          <Link href="/">
-            <img src="/logo/phoenix-small.png" alt="Phoenix 25 Logo" className="h-10 w-auto ml-1" />
+          <Link href="https://futureeducation.in/fiem/" target="_blank">
+            <img src="/logo/future-blue.png" alt="FIEM Logo" className="h-8 w-auto" />
           </Link>
+
           <Link href="/">
-            <span className="font-custom text-xl font-bold text-white">Phoenix '25</span>
+            <span className="font-custom text-xl font-bold text-white hidden md:block">
+              Phoenix '25
+            </span>
           </Link>
+
         </div>
 
         {/* Right - Menu Items (Desktop) */}
@@ -56,7 +60,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white">
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-8 w-8" />}
           </button>
         </div>
       </div>
@@ -72,7 +76,7 @@ const Navbar = () => {
             <div className="flex justify-between items-center p-4 border-b border-pink-500/20 bg-black">
               <div className="flex items-center space-x-2">
                 <Link href="/" onClick={() => setIsOpen(false)}>
-                  <img src="/logo/phoenix-small.png" alt="Phoenix 25 Logo" className="h-10 w-auto" />
+                  <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-auto" />
                 </Link>
                 <span className="text-xl font-bold text-white">Phoenix '25</span>
               </div>
@@ -85,7 +89,7 @@ const Navbar = () => {
             </div>
 
             {/* Menu Items */}
-            <div className="flex flex-col items-center justify-center flex-grow py-8 bg-black">
+            <div className="flex flex-col items-center justify-center flex-grow py-8 pb-10 bg-black">
               {menuItems.map((item) => (
                 <div key={item.href} className="w-full max-w-md px-4 mb-6">
                   <Link
@@ -94,8 +98,8 @@ const Navbar = () => {
                     onClick={() => setIsOpen(false)}
                     rel="next"
                   >
-                    <item.icon className="h-8 w-8 mb-2 text-[#FF2D55]" />
-                    <span className="text-2xl font-medium">{item.label}</span>
+                    <item.icon className="h-6 w-6 mb-2 text-[#FF2D55]" />
+                    <span className="text-xl font-medium">{item.label}</span>
                   </Link>
                 </div>
               ))}
