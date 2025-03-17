@@ -5,6 +5,7 @@ import { Brain, Camera, Code, Gamepad2, Palette, PartyPopper, Trophy, Users } fr
 import Link from 'next/link';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next'
 
 
 export default function Events() {

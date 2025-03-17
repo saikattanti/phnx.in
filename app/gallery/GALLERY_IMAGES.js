@@ -14,7 +14,7 @@ const GALLERY_IMAGES = [
     
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary2.jpg`,
     },
     {
@@ -30,7 +30,7 @@ const GALLERY_IMAGES = [
    
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary5.jpg`,
     },
     {
@@ -40,17 +40,17 @@ const GALLERY_IMAGES = [
     },
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary7.jpg`,
     },
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary8.jpg`,
     },
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary9.jpg`,
     },
     {
@@ -90,7 +90,7 @@ const GALLERY_IMAGES = [
     },
     {
         title: "Phoenix '24 Image",
-        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        category: IMAGE_CATEGORY.COMPETITIONS,
         image: `/gallery/gallary18.jpg`,
     },
     {

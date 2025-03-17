@@ -9,6 +9,7 @@ import { ChevronRight, PlayCircle } from "lucide-react";
 import LoadingScreen from "@/components/LoadingScreen"; // Import Loading Component
 import { useRouter } from "next/navigation";
 import Head from "next/head";
+ 
 
 export default function Home() {
   const router = useRouter()
@@ -19,10 +20,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#121212] text-white">
-       <Head>
+      <Head>
         <title>Phoenix 25 | The annual Techno-Management Fest of FIEM organized by Xplorica</title>
-        <meta name="description" content="Join the ultimate college fest experience at Phoenix 25, inspired by Squid Game"/>
-        <meta name="keywords" content="Phoenix 25, college fest, Squid Game, technical events, hackathon, gaming"/>
+        <meta name="description" content="Join the ultimate college fest experience at Phoenix 25, inspired by Squid Game" />
+        <meta name="keywords" content="Phoenix 25, college fest, Squid Game, technical events, hackathon, gaming" />
       </Head>
 
       {isLoading ? (
@@ -44,7 +45,7 @@ export default function Home() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="font-custom text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-[#FF2D55]">
-                 Phoenix 2025
+                  Phoenix 2025
                 </h1>
                 <p className="font-custom text-xl md:text-2xl mb-8 text-gray-300">
                   4th, 5th & 6th April
