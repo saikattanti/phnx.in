@@ -9,76 +9,110 @@ const GALLERY_IMAGES = [
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436096751_904749291661412_8157201176968706543_n.jpg`,
+        image: `/gallery/gallary1.jpg`,
     },
     
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436117599_904748911661450_2499815375809602376_n.jpg`,
+        image: `/gallery/gallary2.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436152501_904748001661541_4470061373521926832_n.jpg`,
+        image: `/gallery/gallary3.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436163841_904748261661515_5948695842211565936_n.jpg`,
+        image: `/gallery/gallary4.jpg`,
     },
    
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436221534_904748021661539_8179773197999807049_n.jpg`,
+        image: `/gallery/gallary5.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436236269_904748698328138_4554448182616540167_n.jpg`,
+        image: `/gallery/gallary6.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436257722_904749101661431_3489891207450789260_n.jpg`,
+        image: `/gallery/gallary7.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436319332_904749218328086_2549564769768537202_n.jpg`,
+        image: `/gallery/gallary8.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436346437_904748148328193_127123647574057039_n.jpg`,
+        image: `/gallery/gallary9.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436382840_904749354994739_4834828200341245163_n.jpg`,
+        image: `/gallery/gallary10.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436096751_904749291661412_8157201176968706543_n.jpg`,
+        image: `/gallery/gallary11.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436408472_904748994994775_7372160656274910426_n.jpg`,
+        image: `/gallery/gallary12.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.COMPETITIONS,
-        image: `/gallery/436096751_904749291661412_8157201176968706543_n.jpg`,
+        image: `/gallery/gallary13.jpg`,
     },
     {
         title: "Phoenix '24 Image",
         category: IMAGE_CATEGORY.EVENT_PHOTOS,
-        image: `/gallery/436096751_904749291661412_8157201176968706543_n.jpg`,
+        image: `/gallery/gallary14.jpg`,
     },
-    
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary16.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary17.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary18.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary19.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary20.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary21.jpg`,
+    },
+    {
+        title: "Phoenix '24 Image",
+        category: IMAGE_CATEGORY.EVENT_PHOTOS,
+        image: `/gallery/gallary22.jpg`,
+    },
 ]
 
 export default GALLERY_IMAGES;
