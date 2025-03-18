@@ -1,38 +1,67 @@
-"use client";
-import Link from "next/link";
-import { Facebook, Instagram, Youtube, Home, MapPin, Linkedin } from "lucide-react";
+import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandYoutube,
+  IconMapPin,
+  IconHome,
+} from "@tabler/icons-react";
 
 export default function Footer() {
+  const links = [
+    {
+      title: "Instagram",
+      icon: <IconBrandInstagram className="h-6 w-6 text-pink-500" />,
+      href: "https://instagram.com/phnx.fiem",
+    },
+    {
+      title: "LinkedIn",
+      icon: <IconBrandLinkedin className="h-6 w-6 text-blue-500" />,
+      href: "https://in.linkedin.com/company/xplorica",
+    },
+    {
+      title: "Facebook",
+      icon: <IconBrandFacebook className="h-6 w-6 text-blue-500" />,
+      href: "https://facebook.com/phnx.fiem",
+    },
+    {
+      title: "Home",
+      icon: <IconHome className="h-6 w-6 text-white" />,
+      href: "/",
+    },
+    {
+      title: "Contact",
+      icon: <IconMapPin className="h-6 w-6 text-green-500" />,
+      href: "/contact",
+    },
+    {
+      title: "YouTube",
+      icon: <IconBrandYoutube className="h-6 w-6 text-red-500" />,
+      href: "https://www.youtube.com/@Phoenix-xo9ul",
+    },
+  ];
+
   return (
-    <footer className="bg-[#121212] text-gray-300 py-10">
-      <div className="container mx-auto flex flex-col items-center">
-        {/* Social Media Icons */}
-        <div className="flex space-x-8 mb-6">
-          <Link href="https://instagram.com/phnx.fiem" target="_blank">
-            <Instagram className="w-8 h-8 hover:text-pink-500 transition-all duration-300" />
-          </Link>
-
-          <Link href="https://in.linkedin.com/company/xplorica" target="_blank">
-            <Linkedin className="w-8 h-8 hover:text-blue-500 transition-all duration-300" />
-          </Link>
-
-          <Link href="https://facebook.com/phnx.fiem" target="_blank">
-            <Facebook className="w-8 h-8 hover:text-blue-500 transition-all duration-300" />
-          </Link>
-          <Link href="/" target="_blank">
-            <Home className="w-8 h-8 hover:text-white transition-all duration-300" />
-          </Link>
-          <Link href="/contact" target="_blank">
-            <MapPin className="w-8 h-8 hover:text-green-500 transition-all duration-300" />
-          </Link>
-          <Link href="https://www.youtube.com/@Phoenix-xo9ul" target="_blank">
-            <Youtube className="w-8 h-8 hover:text-red-500 transition-all duration-300" />
-          </Link>
+    <footer className="fixed bottom-0 w-full bg-[#121212] text-gray-300">
+      <div className="flex flex-col items-center justify-center py-4">
+        {/* Keep second image style for mobile */}
+        <div className="hidden md:flex">
+          <FloatingDock items={links} />
         </div>
 
-        {/* Links */}
-        <div className="text-sm text-gray-500">
-          <p>&copy; 2025 Phoenix'25. All Rights Reserved.</p>
+        {/* Mobile View */}
+        <div className="md:hidden flex space-x-4 bg-[#1a1a1a] px-6 py-3 rounded-full">
+          {links.map((link, index) => (
+            <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.icon}
+            </a>
+          ))}
+        </div>
+
+        <div className="text-xs md:text-sm text-gray-500 mt-3">
+          &copy; 2025 Phoenix'25. All Rights Reserved.
         </div>
       </div>
     </footer>

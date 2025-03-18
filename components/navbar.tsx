@@ -23,13 +23,13 @@ const Navbar = () => {
         {/* Left - Phoenix Logo & Name */}
         <div className="flex items-center space-x-16">
           <Link href="/">
-            <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-auto ml-1" />
+            <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-14 ml-1" />
           </Link>
           <Link href="https://xplorica.in" target="_blank">
             <img src="/logo/xplorica-small.png" alt="Xplorica Logo" className="h-10 w-auto ml-1" />
           </Link>
           <Link href="https://futureeducation.in/fiem/" target="_blank">
-            <img src="/logo/future-blue.png" alt="FIEM Logo" className="h-8 w-auto" />
+            <img src="/logo/future-blue.png" alt="FIEM Logo" className="h-8 w-14" />
           </Link>
 
           <Link href="/">
