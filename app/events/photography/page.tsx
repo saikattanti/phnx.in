@@ -14,7 +14,7 @@ export default function PHOTOGRAPHY() {
         {
             id: "InstaFrame",
             title: "InstaFrame",
-            image: "/events/photography/new/InstaFrame.jpg"
+            image: "/events/photography/new/reel.jpg"
         }
     ];
 
