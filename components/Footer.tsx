@@ -44,7 +44,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="fixed bottom-0 w-full bg-[#121212] text-gray-300">
+    <footer className="fixed bottom-0 w-full bg-transparent text-gray-300">
       <div className="flex flex-col items-center justify-center py-4">
         {/* Keep second image style for mobile */}
         <div className="hidden md:flex">
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         {/* Mobile View */}
-        <div className="md:hidden flex space-x-4 bg-[#1a1a1a] px-6 py-3 rounded-full">
+        <div className="md:hidden flex space-x-4 bg-transparent px-6 py-3 rounded-full">
           {links.map((link, index) => (
             <a key={index} href={link.href} target="_blank" rel="noopener noreferrer">
               {link.icon}

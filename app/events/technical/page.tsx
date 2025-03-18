@@ -25,27 +25,27 @@ export default function GamingEvents() {
         {
             id: "The following",
             title: "The following",
-            image: "/events/technical/the_following.jpg"
+            image: "/events/technical/new/the_following.jpg"
         },
         {
             id: "Robo rush",
             title: "Robo rush",
-            image: "/events/technical/robo_rush.jpg"
+            image: "/events/technical/new/robo_rush.jpg"
         },
         {
             id: "Captain tsubotsa",
             title: "Captain tsubotsa",
-            image: "/events/technical/captain.jpg"
+            image: "/events/technical/new/captain.jpg"
         },
         {
             id: "Robo Maze",
             title: "Robo Maze",
-            image: "/events/technical/robo_maze.jpg"
+            image: "/events/technical/new/robo maze.jpg"
         },
         {
             id: "robo war",
             title: "Robo War",
-            image: "/events/technical/robo_war.jpg"
+            image: "/events/technical/new/robo_war.jpg"
         }
 
     ];

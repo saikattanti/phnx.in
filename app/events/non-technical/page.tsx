@@ -39,7 +39,7 @@ export default function GamingEvents() {
         {
             id: "Cosplay",
             title: "Cosplay",
-            image: "/events/carnival/cosplay.jpg"
+            image: "/events/non_tech/new/cosplay.jpg"
         }
     ];
 
