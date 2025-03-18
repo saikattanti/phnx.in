@@ -13,7 +13,7 @@ export default function Footer() {
   const links = [
     {
       title: "Instagram",
-      icon: <IconBrandInstagram className="h-6 w-6 text-pink-500" />,
+      icon: <IconBrandInstagram className="h-5 w-6 text-pink-500" />,
       href: "https://instagram.com/phnx.fiem",
     },
     {
