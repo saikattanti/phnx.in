@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
         {/* Left - Phoenix Logo & Name */}
-        <div className="flex items-center space-x-16">
+        <div className="flex items-center space-x-14">
           <Link href="/">
             <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-14 ml-1" />
           </Link>

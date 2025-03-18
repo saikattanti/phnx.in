@@ -10,12 +10,12 @@ export default function GamingEvents() {
         {
             id: "Web-Escape",
             title: "Web-Escape",
-            image: "/events/technical/web-escape.jpg"
+            image: "/events/technical/new/web-escapeee..jpg"
         },
         {
             id: "F-society",
             title: "F-society",
-            image: "/events/technical/f-society.jpg"
+            image: "/events/technical/new/F-Society.jpg"
         },
         {
             id: "Bots of Anarchy",
