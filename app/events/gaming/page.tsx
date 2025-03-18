@@ -9,12 +9,12 @@ export default function GamingEvents() {
         {
             id: "valorant",
             title: "Valorant",
-            image: "/events/valorant.webp"
+            image: "/events/gaming/free.fire.jpg"
         },
         {
             id: "e-football",
             title: "E-Football",
-            image: "/events/e-football.jpg"
+            image: "/events/gaming/e-football.jpg"
         },
         {
             id: "free-fire-max",
@@ -24,7 +24,7 @@ export default function GamingEvents() {
         {
             id: "bgmi",
             title: "BGMI",
-            image: "/events/bgmi.jpeg"
+            image: "/events/gaming/bgmi.jpg"
         }
     ];
 
