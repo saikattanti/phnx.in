@@ -11,16 +11,16 @@ type Sponsor = {
 };
 
 const lastYearSponsors: Sponsor[] = [
-  { name: "Unstop", logo: "/sponsors/unstop.jpg", website: "https://unstop.com/" },
-  { name: "Apptech", logo: "/sponsors/apptech.png", website: "#" },
-  { name: "Edugraph", logo: "/sponsors/edugraph.jpg", website: "https://www.telegraphindia.com/edugraph" },
-  { name: "Finlatics", logo: "/sponsors/finlatics.png", website: "https://www.finlatics.com/" },
-  { name: "Globsyn", logo: "/sponsors/globsyn.jpeg", website: "#" },
-  { name: "Kebab Stop", logo: "/sponsors/kebab_stop.jpeg", website: "https://www.facebook.com/kebabbstop" },
-  { name: "pizzahut", logo: "/sponsors/pizzahut.jpeg", website: "https://www.pizzahut.co.in/" },
-  { name: "Reel 2 Real", logo: "/sponsors/reel2real.png", website: "https://www.facebook.com/reel2real.ronit" },
-  { name: "Tea", logo: "/sponsors/Tea.jpeg", website: "#" },
-  { name: "Time", logo: "/sponsors/Time.jpeg", website: "#" },
+  { name: "Unstop", logo: "/sponsors/less_size/unstop.jpg", website: "https://unstop.com/" },
+  { name: "Apptech", logo: "/sponsors/less_size/apptech.png", website: "#" },
+  { name: "Edugraph", logo: "/sponsors/less_size/edugraph.jpg", website: "https://www.telegraphindia.com/edugraph" },
+  { name: "Finlatics", logo: "/sponsors/less_size/finlatics.png", website: "https://www.finlatics.com/" },
+  { name: "Globsyn", logo: "/sponsors/less_size/globsyn.jpg", website: "#" },
+  { name: "Kebab Stop", logo: "/sponsors/less_size/kebab_stop.jpg", website: "https://www.facebook.com/kebabbstop" },
+  { name: "pizzahut", logo: "/sponsors/less_size/pizzahut.jpg", website: "https://www.pizzahut.co.in/" },
+  { name: "Reel 2 Real", logo: "/sponsors/less_size/reel2real.png", website: "https://www.facebook.com/reel2real.ronit" },
+  { name: "Tea", logo: "/sponsors/less_size/Tea.jpg", website: "#" },
+  { name: "Time", logo: "/sponsors/less_size/Time.jpg", website: "#" },
 ];
 
 export default function SponsorshipPage() {
