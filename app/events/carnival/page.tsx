@@ -26,6 +26,11 @@ export default function GamingEvents() {
             title: "Shooting",
             image: "/events/carnival/new/Shooting.jpg"
         },
+        {
+            id: "Red Light, Green Light",
+            title: "Red Light, Green Light",
+            image: "/events/carnival/new/red&green_light.jpg"
+        },
         // {
         //     id: "Cosplay",
         //     title: "Cosplay",
