@@ -19,7 +19,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#121212] text-white">
+    <div className="min-h-screen flex flex-col overflow-hidden bg-[#121212] text-white">
       <Head>
         <title>Phoenix 25 | The annual Techno-Management Fest of FIEM organized by Xplorica</title>
         <meta name="description" content="Join the ultimate college fest experience at Phoenix 25, inspired by Squid Game" />

@@ -44,7 +44,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="fixed bottom-0 w-full bg-transparent text-gray-300">
+    <footer className=" bottom-0 w-full bg-[#121212] text-black">
       <div className="flex flex-col items-center justify-center py-4">
         {/* Keep second image style for mobile */}
         <div className="hidden md:flex">
