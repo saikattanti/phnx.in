@@ -104,33 +104,33 @@ export default function Contact() {
                     const form = e.target as HTMLFormElement;
                     const name = (form.elements.namedItem("name") as HTMLInputElement)?.value || "";
                     const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || "";
+                    const contact = (form.elements.namedItem("contact") as HTMLInputElement)?.value || "Not provided";
                     const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "";
 
                     const subject = encodeURIComponent(`New Contact Form Submission from ${name}`);
-                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nContact: ${contact}\n\nMessage:\n${message}`);
 
                     const isAndroid = /Android/i.test(navigator.userAgent);
                     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
                     // ✅ Force Gmail app on Android
                     if (isAndroid) {
-                      const gmailIntentURL = `intent://compose?to=saikat.tanti.fiem.cse23@teamfuture.in&subject=${subject}&body=${body}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
+                      const gmailIntentURL = `intent://compose?to=xplorica@teamfuture.in&subject=${subject}&body=${body}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
                       window.location.href = gmailIntentURL;
                     } 
                     // ✅ Open Gmail Web on iOS & Desktop
                     else {
-                      const gmailWebURL = `https://mail.google.com/mail/?view=cm&fs=1&to=saikat.tanti.fiem.cse23@teamfuture.in&su=${subject}&body=${body}`;
+                      const gmailWebURL = `https://mail.google.com/mail/?view=cm&fs=1&to=xplorica@teamfuture.in&su=${subject}&body=${body}`;
                       window.open(gmailWebURL, "_blank");
                     }
                   }}
                 >
                   <input type="text" name="name" placeholder="Your Name" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
                   <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
+                  <input type="tel" name="contact" placeholder="Your Contact Number (Optional)" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" />
                   <textarea name="message" placeholder="Your Message" rows={4} className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
                   <button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-md">Send Message</button>
                 </form>
-
-
               </div>
 
 
