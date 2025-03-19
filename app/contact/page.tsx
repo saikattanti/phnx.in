@@ -109,9 +109,19 @@ export default function Contact() {
                     const subject = encodeURIComponent(`New Contact Form Submission from ${name}`);
                     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-                    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=saikat.tanti.fiem.cse23@teamfuture.in&su=${subject}&body=${body}`;
-                    window.open(gmailURL, "_blank");
+                    const isAndroid = /Android/i.test(navigator.userAgent);
+                    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
+                    // ✅ Force Gmail app on Android
+                    if (isAndroid) {
+                      const gmailIntentURL = `intent://compose?to=saikat.tanti.fiem.cse23@teamfuture.in&subject=${subject}&body=${body}#Intent;scheme=mailto;package=com.google.android.gm;end;`;
+                      window.location.href = gmailIntentURL;
+                    } 
+                    // ✅ Open Gmail Web on iOS & Desktop
+                    else {
+                      const gmailWebURL = `https://mail.google.com/mail/?view=cm&fs=1&to=saikat.tanti.fiem.cse23@teamfuture.in&su=${subject}&body=${body}`;
+                      window.open(gmailWebURL, "_blank");
+                    }
                   }}
                 >
                   <input type="text" name="name" placeholder="Your Name" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
@@ -119,6 +129,7 @@ export default function Contact() {
                   <textarea name="message" placeholder="Your Message" rows={4} className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
                   <button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-md">Send Message</button>
                 </form>
+
 
               </div>
 
