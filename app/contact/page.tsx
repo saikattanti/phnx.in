@@ -94,15 +94,34 @@ export default function Contact() {
           {/* Contact Form and Contact Details - Side by Side */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
             {/* Contact Form */}
-            <div className="w-full md:w-2/3 bg-black/50 backdrop-blur-md p-6 rounded-lg border border-pink-500/20">
-              <h2 className="text-2xl font-bold text-pink-500 mb-4">Get in Touch</h2>
-              <form className="space-y-4">
-                <input type="text" placeholder="Your Name" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" />
-                <input type="email" placeholder="Your Email" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" />
-                <textarea placeholder="Your Message" rows={4} className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" />
-                <button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-md">Send Message</button>
-              </form>
-            </div>
+              <div className="w-full md:w-2/3 bg-black/50 backdrop-blur-md p-6 rounded-lg border border-pink-500/20">
+                <h2 className="text-2xl font-bold text-pink-500 mb-4">Get in Touch</h2>
+                <form
+                  className="space-y-4"
+                  onSubmit={(e) => {
+                    e.preventDefault();
+
+                    const form = e.target as HTMLFormElement;
+                    const name = (form.elements.namedItem("name") as HTMLInputElement)?.value || "";
+                    const email = (form.elements.namedItem("email") as HTMLInputElement)?.value || "";
+                    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value || "";
+
+                    const subject = encodeURIComponent(`New Contact Form Submission from ${name}`);
+                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+                    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=saikat.tanti.fiem.cse23@teamfuture.in&su=${subject}&body=${body}`;
+                    window.open(gmailURL, "_blank");
+
+                  }}
+                >
+                  <input type="text" name="name" placeholder="Your Name" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
+                  <input type="email" name="email" placeholder="Your Email" className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
+                  <textarea name="message" placeholder="Your Message" rows={4} className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white" required />
+                  <button type="submit" className="w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-md">Send Message</button>
+                </form>
+
+              </div>
+
 
             {/* XplOriCa Contact Details */}
             <div className="w-full md:w-1/3 bg-black/50 p-6 rounded-lg border border-pink-500/20">
