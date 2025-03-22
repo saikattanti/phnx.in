@@ -283,7 +283,7 @@ export default function Team() {
       ? teamMembers
       : teamMembers.filter((member) => member.position === selectedPosition);
 
-   // Function to handle email click    
+   // Function to handle email click
   const handleEmailClick = (email: string) => {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
     const mailtoLink = isMobile
@@ -382,12 +382,18 @@ export default function Team() {
 
                     {/* Contact Info */}
                     <div className="mt-4">
-                      <p className="text-gray-400 text-sm flex items-center gap-2">
-                        📞 {member.phone}
-                      </p>
-                      <p className="text-gray-400 text-sm flex items-center gap-2">
-                        ✉️ {member.email}
-                      </p>
+                      <button
+                        onClick={() => handlePhoneClick(member.phone)}
+                        className="text-gray-400 text-sm flex items-center gap-2 hover:text-[#FF2D55] transition-all"
+                      >
+                        <Phone className="w-4 h-4" /> {member.phone}
+                      </button>
+                      <button
+                        onClick={() => handleEmailClick(member.email)}
+                        className="text-gray-400 text-sm flex items-center gap-2 hover:text-[#FF2D55] transition-all"
+                      >
+                        <Mail className="w-4 h-4" /> {member.email}
+                      </button>
                     </div>
 
                     {/* Social Icons */}
