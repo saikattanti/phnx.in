@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import { Code, Brush, Camera, Brain, Megaphone, Users } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Linkedin, Facebook, Mail, Phone, Code, Brush, Camera, Brain, Megaphone } from "lucide-react";
+import { BackgroundGradient } from "@/components/ui/background-gradient";
+import Image from "next/image";
 
 export default function Team() {
   const teamMembers = [
@@ -9,52 +12,303 @@ export default function Team() {
       id: "001",
       name: "Alex Chen",
       role: "Technical Lead",
+      position: "Facilitator",
       icon: Code,
-      description: "Leading the technical challenges and hackathon events",
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 98765 43210",
+      email: "alex@example.com",
+      linkedin: "https://linkedin.com/in/alexchen",
+      facebook: "https://facebook.com/alexchen",
+    },
+    {
+      id: "002",
+      name: "Alex Chen",
+      role: "Technical Lead",
+      position: "Facilitator",
+      icon: Code,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 98765 43210",
+      email: "alex@example.com",
+      linkedin: "https://linkedin.com/in/alexchen",
+      facebook: "https://facebook.com/alexchen",
+    },
+    {
+      id: "003",
+      name: "Alex Chen",
+      role: "Technical Lead",
+      position: "Facilitator",
+      icon: Code,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 98765 43210",
+      email: "alex@example.com",
+      linkedin: "https://linkedin.com/in/alexchen",
+      facebook: "https://facebook.com/alexchen",
     },
     {
       id: "067",
       name: "Sarah Kim",
       role: "Creative Director",
+      position: "Mentors",
       icon: Brush,
-      description: "Bringing the Squid Game aesthetic to life",
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 78965 43210",
+      email: "sarah@example.com",
+      linkedin: "https://linkedin.com/in/sarahkim",
+      facebook: "https://facebook.com/sarahkim",
+    },
+    {
+      id: "068",
+      name: "Sarah Kim",
+      role: "Creative Director",
+      position: "Mentors",
+      icon: Brush,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 78965 43210",
+      email: "sarah@example.com",
+      linkedin: "https://linkedin.com/in/sarahkim",
+      facebook: "https://facebook.com/sarahkim",
+    },
+    {
+      id: "069",
+      name: "Sarah Kim",
+      role: "Creative Director",
+      position: "Mentors",
+      icon: Brush,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 78965 43210",
+      email: "sarah@example.com",
+      linkedin: "https://linkedin.com/in/sarahkim",
+      facebook: "https://facebook.com/sarahkim",
+    },
+    {
+      id: "070",
+      name: "Sarah Kim",
+      role: "Creative Director",
+      position: "Mentors",
+      icon: Brush,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 78965 43210",
+      email: "sarah@example.com",
+      linkedin: "https://linkedin.com/in/sarahkim",
+      facebook: "https://facebook.com/sarahkim",
+    },
+    {
+      id: "071",
+      name: "Sarah Kim",
+      role: "Creative Director",
+      position: "Mentors",
+      icon: Brush,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 78965 43210",
+      email: "sarah@example.com",
+      linkedin: "https://linkedin.com/in/sarahkim",
+      facebook: "https://facebook.com/sarahkim",
     },
     {
       id: "218",
       name: "Mike Zhang",
       role: "Photography Lead",
+      position: "Core Committee",
       icon: Camera,
-      description: "Capturing the intensity of every moment",
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
     },
     {
-      id: "456",
+      id: "219",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "220",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "221",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "222",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "223",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "224",
+      name: "Mike Zhang",
+      role: "Photography Lead",
+      position: "Core Committee",
+      icon: Camera,
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 87654 32109",
+      email: "mike@example.com",
+      linkedin: "https://linkedin.com/in/mikezhang",
+      facebook: "https://facebook.com/mikezhang",
+    },
+    {
+      id: "456",  
       name: "Emma Singh",
       role: "Event Coordinator",
+      position: "Working Committee",
       icon: Brain,
-      description: "Orchestrating the perfect game experience",
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
+    },
+    {
+      id: "455",
+      name: "Emma Singh",
+      role: "Event Coordinator",
+      position: "Working Committee",
+      icon: Brain,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
+    },
+    {
+      id: "454",
+      name: "Emma Singh",
+      role: "Event Coordinator",
+      position: "Working Committee",
+      icon: Brain,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
+    },
+    {
+      id: "453",
+      name: "Emma Singh",
+      role: "Event Coordinator",
+      position: "Working Committee",
+      icon: Brain,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
+    },
+    {
+      id: "452",
+      name: "Emma Singh",
+      role: "Event Coordinator",
+      position: "Working Committee",
+      icon: Brain,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
+    },
+    {
+      id: "451",
+      name: "Emma Singh",
+      role: "Event Coordinator",
+      position: "Working Committee",
+      icon: Brain,
+      image: "/team/saptarshi-cc.jpg",
+      phone: "+91 76543 21098",
+      email: "emma@example.com",
+      linkedin: "https://linkedin.com/in/emmasingh",
+      facebook: "https://facebook.com/emmasingh",
     },
     {
       id: "199",
       name: "David Park",
       role: "Marketing Head",
+      position: "Coordinators",
       icon: Megaphone,
-      description: "Spreading the word about Phoenix 25",
-    },
-    {
-      id: "101",
-      name: "Lisa Wang",
-      role: "Community Manager",
-      icon: Users,
-      description: "Building and nurturing our player community",
+      image: "/team/saikat-wc.jpg",
+      phone: "+91 65432 10987",
+      email: "david@example.com",
+      linkedin: "https://linkedin.com/in/davidpark",
+      facebook: "https://facebook.com/davidpark",
     },
   ];
 
+  // State for Filtering
+  const [selectedPosition, setSelectedPosition] = useState("All");
+
+  // Filtered Team Members
+  const filteredMembers =
+    selectedPosition === "All"
+      ? teamMembers
+      : teamMembers.filter((member) => member.position === selectedPosition);
+
+   // Function to handle email click    
+  const handleEmailClick = (email: string) => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    const mailtoLink = isMobile
+      ? `mailto:${email}`
+      : `https://mail.google.com/mail/?view=cm&to=${email}`;
+
+    window.open(mailtoLink, "_blank");
+  };
+
+  // Function to handle phone click
+  const handlePhoneClick = (phone: string) => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = `tel:${phone}`;
+    } else {
+      alert(`Call ${phone} from your phone.`);
+    }
+  };
+
+  
   return (
     <div className="min-h-screen bg-[#121212] pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?q=80&w=2000')] bg-cover bg-center opacity-20" />
-        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -72,11 +326,28 @@ export default function Team() {
         </div>
       </section>
 
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
+        {["All", "Facilitator", "Mentors", "Core Committee", "Working Committee", "Coordinators"].map(
+          (position) => (
+            <button
+              key={position}
+              className={`px-4 py-2 rounded-full text-white border ${
+                selectedPosition === position ? "bg-[#FF2D55]" : "bg-gray-800"
+              }`}
+              onClick={() => setSelectedPosition(position)}
+            >
+              {position}
+            </button>
+          )
+        )}
+      </div>
+
       {/* Team Grid */}
       <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {filteredMembers.map((member, index) => (
               <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -84,48 +355,55 @@ export default function Team() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden border border-pink-500/20 hover:border-pink-500/40 transition-all duration-300">
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-6">
-                      <member.icon className="h-8 w-8 text-[#FF2D55]" />
-                      <span className="text-gray-400 font-mono">#{member.id}</span>
-                    </div>
+                <BackgroundGradient className="rounded-[22px] p-4 bg-black border border-[#FF2D55]/30 hover:border-[#FF2D55] transition-all duration-300 w-full aspect-[3/4] flex flex-col">
+                  
+                  {/* Image Section */}
+                  <div className="relative w-full h-[55%] overflow-hidden rounded-lg">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-t-lg"
+                    />
+                  </div>
 
-                    <div className="space-y-2">
-                      <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                      <p className="text-[#FF2D55] font-medium">{member.role}</p>
-                      <p className="text-gray-400">{member.description}</p>
-                    </div>
-
-                    <div className="mt-6 pt-6 border-t border-pink-500/10">
-                      <div className="flex items-center space-x-4">
-                        <div className="h-2 w-2 bg-[#FF2D55] rounded-full animate-pulse" />
-                        <span className="text-gray-300 text-sm">Active Game Master</span>
+                  {/* Info Section */}
+                  <div className="p-4 h-[45%] flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <member.icon className="h-6 w-6 text-[#FF2D55]" />
+                        <span className="text-gray-400 font-mono text-sm">#{member.id}</span>
                       </div>
+                      <h3 className="text-lg font-bold text-white">{member.name}</h3>
+                      <p className="text-[#FF2D55] font-medium text-sm">{member.role}</p>
+                      <p className="text-gray-300 text-sm">{member.position}</p>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div className="mt-4">
+                      <p className="text-gray-400 text-sm flex items-center gap-2">
+                        📞 {member.phone}
+                      </p>
+                      <p className="text-gray-400 text-sm flex items-center gap-2">
+                        ✉️ {member.email}
+                      </p>
+                    </div>
+
+                    {/* Social Icons */}
+                    <div className="absolute bottom-10 right-4 flex gap-3">
+                      <a href={member.linkedin} target="_blank" className="hover:text-[#FF2D55]">
+                        <Linkedin className="h-5 w-5 text-gray-400 hover:text-[#FF2D55]" />
+                      </a>
+                      <a href={member.facebook} target="_blank" className="hover:text-[#FF2D55]">
+                        <Facebook className="h-5 w-5 text-gray-400 hover:text-[#FF2D55]" />
+                      </a>
                     </div>
                   </div>
-                </div>
+                </BackgroundGradient>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Join the Team Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="bg-gradient-to-r from-pink-500/10 to-transparent p-8 rounded-2xl border border-pink-500/20 text-center"
-          >
-            <h2 className="text-3xl font-bold mb-4 text-white">Join Our Team</h2>
-            <p className="text-gray-300 text-lg mb-4">
-              Think you have what it takes to be a Game Master?
-            </p>
-            <p className="text-[#FF2D55]">Applications opening soon</p>
-          </motion.div>
         </div>
       </section>
     </div>

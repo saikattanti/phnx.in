@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Menu, X, Triangle, Square, Camera, Circle, Phone } from "lucide-react";
+import { Menu, X, Triangle, Square, Camera, Circle, Phone, Users } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,7 @@ const Navbar = () => {
   const menuItems = [
     { href: "/events", label: "Events", icon: Triangle },
     { href: "/sponsors", label: "Sponsors", icon: Square },
+    { href: "/teams", label: "Teams", icon: Users },
     { href: "/gallery", label: "Gallery", icon: Camera },
     { href: "/about", label: "About Us", icon: Circle },
     { href: "/contact", label: "Contact Us", icon: Phone },
@@ -41,7 +42,7 @@ const Navbar = () => {
         </div>
 
         {/* Right - Menu Items (Desktop) */}
-        <div className="hidden md:flex items-center space-x-8 font-custom">
+        <div className="hidden md:flex items-center space-x-6 font-custom">
           {menuItems.map((item) => (
             <motion.div key={item.href} whileHover={{ scale: 1.1, y: -3 }} transition={{ duration: 0.3 }}>
               <Link
@@ -66,52 +67,54 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black md:hidden z-[999]"
-          style={{ backgroundColor: "#000000", opacity: 1 }}
-        >
-          <div className="flex flex-col h-full bg-black">
-            {/* Mobile Header with Close Button */}
-            <div className="flex justify-between items-center p-4 border-b border-pink-500/20 bg-black">
-              <div className="flex items-center space-x-2">
-                <Link href="/" onClick={() => setIsOpen(false)}>
-                  <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-auto" />
-                </Link>
-                <span className="text-xl font-bold text-white">Phoenix '25</span>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-white hover:text-[#FF2D55] transition-colors"
-              >
-                <X className="h-8 w-8" />
-              </button>
-            </div>
-
-            {/* Menu Items */}
-            <div className="flex flex-col items-center justify-center flex-grow py-8 pb-10 bg-black">
-              {menuItems.map((item) => (
-                <div key={item.href} className="w-full max-w-md px-4 mb-6">
-                  <Link
-                    href={item.href}
-                    className="flex flex-col items-center text-center py-4 text-gray-300 hover:text-[#FF2D55] transition-colors"
-                    onClick={() => setIsOpen(false)}
-                    rel="next"
-                  >
-                    <item.icon className="h-6 w-6 mb-2 text-[#FF2D55]" />
-                    <span className="text-xl font-medium">{item.label}</span>
-                  </Link>
+        {isOpen && (
+          <div
+            className="fixed top-0 right-0 w-2/3 h-full bg-[#000001] md:hidden z-[999] shadow-lg transform translate-x-0 transition-transform duration-300 ease-in-out"
+          >
+            <div className="flex flex-col h-full bg-[#000001]">
+              
+              {/* Mobile Header with Close Button */}
+              <div className="flex justify-between items-center p-4 border-b border-pink-500/20 bg-black">
+                <div className="flex items-center space-x-2">
+                  {/* <Link href="/" onClick={() => setIsOpen(false)}>
+                    <img src="/logo/logo.png" alt="Phoenix 25 Logo" className="h-12 w-auto" />
+                  </Link> */}
+                  <span className="text-xl font-bold text-white">Phoenix '25</span>
                 </div>
-              ))}
-            </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:text-[#FF2D55] transition-colors"
+                >
+                  <X className="h-8 w-8" />
+                </button>
+              </div>
 
-            {/* Footer */}
-            <div className="p-4 text-center text-gray-500 text-sm border-t border-pink-500/20 mt-auto bg-black">
-              <p>© 2025 Phoenix</p>
+              {/* Menu Items */}
+              <div className="flex flex-col items-start justify-center flex-grow py-8 pb-10 px-8 bg-black">
+                {menuItems.map((item) => (
+                  <div key={item.href} className="w-full mb-6">
+                    <Link
+                      href={item.href}
+                      className="flex items-center space-x-4 py-4 text-gray-300 hover:text-[#FF2D55] transition-colors"
+                      onClick={() => setIsOpen(false)}
+                      rel="next"
+                    >
+                      <item.icon className="h-7 w-7 text-[#FF2D55]" />
+                      <span className="text-xl font-medium whitespace-nowrap">{item.label}</span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              {/* Footer */}
+              <div className="p-4 text-center text-gray-500 text-sm border-t border-pink-500/20 mt-auto bg-black">
+                <p>© 2025 Phoenix</p>
+              </div>
+
             </div>
           </div>
-        </div>
-      )}
+        )}
+
     </nav>
   );
 };
